@@ -103,11 +103,12 @@ workflows:
   - id: 56exyf4nvjg
     name: basic_relighting_api.json
     file: relighting/basic_relighting_api.json
-    version: 0
+    version: 1
     description: ''
     inputs: []
     outputs: []
     skip_preprocess: true
+    advancedConfig: false
   - id: krht6t1ylzh
     name: product_photography_2_api.json
     file: inpainting_and_outpainting/product_photography_2_api.json
@@ -212,7 +213,7 @@ normal_workflows:
   - id: 6in8kl11ite
     name: basic_relighting.json
     file: relighting/basic_relighting.json
-    version: 0
+    version: 1
   - id: eeoibme22rl
     name: product_photography_2.json
     file: inpainting_and_outpainting/product_photography_2.json
