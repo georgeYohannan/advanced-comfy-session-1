@@ -48,11 +48,12 @@ workflows:
   - id: 9sz31776699
     name: controlnet_connection_api.json
     file: basics/controlnet_connection_api.json
-    version: 1
+    version: 2
     description: ''
     inputs: []
     outputs: []
     skip_preprocess: true
+    advancedConfig: false
   - id: 61rifburtgy
     name: segment_anything_api.json
     file: basics/segment_anything_api.json
@@ -198,7 +199,7 @@ normal_workflows:
   - id: q21h5nk21po
     name: controlnet_connection.json
     file: basics/controlnet_connection.json
-    version: 1
+    version: 2
   - id: flu0dkbhzzn
     name: segment_anything.json
     file: basics/segment_anything.json
