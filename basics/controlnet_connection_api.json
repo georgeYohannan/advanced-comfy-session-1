@@ -40,8 +40,8 @@
     },
     "5": {
         "inputs": {
-            "width": 512,
-            "height": 512,
+            "width": 1024,
+            "height": 1024,
             "batch_size": 1
         },
         "class_type": "EmptyLatentImage",
@@ -51,7 +51,7 @@
     },
     "6": {
         "inputs": {
-            "text": "boy standing in room",
+            "text": "A beautiful European cobblestone street leading towards a grand old church, sunny bright day, vintage architecture, atmospheric perspective, realistic lighting, ultra detailed, 4K\n",
             "clip": [
                 "4",
                 1
@@ -119,7 +119,7 @@
     "11": {
         "inputs": {
             "ckpt_name": "depth_anything_vitl14.pth",
-            "resolution": 512,
+            "resolution": 1024,
             "image": [
                 "14",
                 0
@@ -172,7 +172,7 @@
     },
     "14": {
         "inputs": {
-            "image": "ComfyUI_00010_ (2).png",
+            "image": "European_Church.jpg",
             "upload": "image"
         },
         "class_type": "LoadImage",
