@@ -40,11 +40,12 @@ workflows:
   - id: xtthnc37xx
     name: controlnet_preprocessors_api.json
     file: basics/controlnet_preprocessors_api.json
-    version: 0
+    version: 1
     description: ''
     inputs: []
     outputs: []
     skip_preprocess: true
+    advancedConfig: false
   - id: 9sz31776699
     name: controlnet_connection_api.json
     file: basics/controlnet_connection_api.json
@@ -195,7 +196,7 @@ normal_workflows:
   - id: 6765idkbpdn
     name: controlnet_preprocessors.json
     file: basics/controlnet_preprocessors.json
-    version: 0
+    version: 1
   - id: q21h5nk21po
     name: controlnet_connection.json
     file: basics/controlnet_connection.json
