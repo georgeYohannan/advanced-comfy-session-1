@@ -122,5 +122,34 @@
         "_meta": {
             "title": "Preview Image"
         }
+    },
+    "20": {
+        "inputs": {
+            "detect_hand": "enable",
+            "detect_body": "enable",
+            "detect_face": "enable",
+            "resolution": 512,
+            "scale_stick_for_xinsr_cn": "disable",
+            "image": [
+                "10",
+                0
+            ]
+        },
+        "class_type": "OpenposePreprocessor",
+        "_meta": {
+            "title": "OpenPose Pose"
+        }
+    },
+    "21": {
+        "inputs": {
+            "images": [
+                "20",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
     }
 }
