@@ -1,6 +1,6 @@
 {
-    "last_node_id": 18,
-    "last_link_id": 17,
+    "last_node_id": 21,
+    "last_link_id": 19,
     "nodes": [
         {
             "id": 10,
@@ -25,7 +25,8 @@
                         10,
                         11,
                         12,
-                        13
+                        13,
+                        18
                     ],
                     "slot_index": 0
                 },
@@ -44,75 +45,6 @@
                 "example.png",
                 "image"
             ]
-        },
-        {
-            "id": 13,
-            "type": "DepthAnythingPreprocessor",
-            "pos": [
-                1186.22412109375,
-                -140.90338134765625
-            ],
-            "size": [
-                315,
-                82
-            ],
-            "flags": {},
-            "order": 4,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "image",
-                    "type": "IMAGE",
-                    "link": 13
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "IMAGE",
-                    "type": "IMAGE",
-                    "links": [
-                        14
-                    ],
-                    "slot_index": 0
-                }
-            ],
-            "properties": {
-                "aux_id": "Fannovel16/comfyui_controlnet_aux",
-                "ver": "1e9eac6377c882da8bb360c7544607036904362c",
-                "Node name for S&R": "DepthAnythingPreprocessor"
-            },
-            "widgets_values": [
-                "depth_anything_vitl14.pth",
-                512
-            ]
-        },
-        {
-            "id": 15,
-            "type": "PreviewImage",
-            "pos": [
-                1699.50634765625,
-                -119.56039428710938
-            ],
-            "size": [
-                210,
-                246
-            ],
-            "flags": {},
-            "order": 8,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "images",
-                    "type": "IMAGE",
-                    "link": 14
-                }
-            ],
-            "outputs": [],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "PreviewImage"
-            }
         },
         {
             "id": 11,
@@ -146,43 +78,16 @@
                 }
             ],
             "properties": {
-                "aux_id": "Fannovel16/comfyui_controlnet_aux",
+                "cnr_id": "comfyui_controlnet_aux",
                 "ver": "1e9eac6377c882da8bb360c7544607036904362c",
-                "Node name for S&R": "CannyEdgePreprocessor"
+                "Node name for S&R": "CannyEdgePreprocessor",
+                "aux_id": "Fannovel16/comfyui_controlnet_aux"
             },
             "widgets_values": [
                 100,
                 200,
                 512
             ]
-        },
-        {
-            "id": 16,
-            "type": "PreviewImage",
-            "pos": [
-                1901.7713623046875,
-                45.12398910522461
-            ],
-            "size": [
-                210,
-                246
-            ],
-            "flags": {},
-            "order": 5,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "images",
-                    "type": "IMAGE",
-                    "link": 15
-                }
-            ],
-            "outputs": [],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "PreviewImage"
-            }
         },
         {
             "id": 12,
@@ -221,9 +126,10 @@
                 }
             ],
             "properties": {
-                "aux_id": "Fannovel16/comfyui_controlnet_aux",
+                "cnr_id": "comfyui_controlnet_aux",
                 "ver": "1e9eac6377c882da8bb360c7544607036904362c",
-                "Node name for S&R": "DWPreprocessor"
+                "Node name for S&R": "DWPreprocessor",
+                "aux_id": "Fannovel16/comfyui_controlnet_aux"
             },
             "widgets_values": [
                 "enable",
@@ -236,32 +142,46 @@
             ]
         },
         {
-            "id": 17,
-            "type": "PreviewImage",
+            "id": 13,
+            "type": "DepthAnythingPreprocessor",
             "pos": [
-                1681.0489501953125,
-                260.2453918457031
+                1186.22412109375,
+                -140.90338134765625
             ],
             "size": [
-                210,
-                246
+                315,
+                82
             ],
             "flags": {},
-            "order": 6,
+            "order": 4,
             "mode": 0,
             "inputs": [
                 {
-                    "name": "images",
+                    "name": "image",
                     "type": "IMAGE",
-                    "link": 16
+                    "link": 13
                 }
             ],
-            "outputs": [],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        14
+                    ],
+                    "slot_index": 0
+                }
+            ],
             "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "PreviewImage"
-            }
+                "cnr_id": "comfyui_controlnet_aux",
+                "ver": "1e9eac6377c882da8bb360c7544607036904362c",
+                "Node name for S&R": "DepthAnythingPreprocessor",
+                "aux_id": "Fannovel16/comfyui_controlnet_aux"
+            },
+            "widgets_values": [
+                "depth_anything_vitl14.pth",
+                512
+            ]
         },
         {
             "id": 14,
@@ -295,9 +215,10 @@
                 }
             ],
             "properties": {
-                "aux_id": "Fannovel16/comfyui_controlnet_aux",
+                "cnr_id": "comfyui_controlnet_aux",
                 "ver": "1e9eac6377c882da8bb360c7544607036904362c",
-                "Node name for S&R": "AnyLineArtPreprocessor_aux"
+                "Node name for S&R": "AnyLineArtPreprocessor_aux",
+                "aux_id": "Fannovel16/comfyui_controlnet_aux"
             },
             "widgets_values": [
                 "lineart_standard",
@@ -309,11 +230,69 @@
             ]
         },
         {
-            "id": 18,
+            "id": 15,
             "type": "PreviewImage",
             "pos": [
-                1712.0682373046875,
-                660.1946411132812
+                1698.4063720703125,
+                -171.26039123535156
+            ],
+            "size": [
+                210,
+                246
+            ],
+            "flags": {},
+            "order": 9,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 14
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "PreviewImage"
+            },
+            "widgets_values": []
+        },
+        {
+            "id": 16,
+            "type": "PreviewImage",
+            "pos": [
+                1705.97119140625,
+                118.82400512695312
+            ],
+            "size": [
+                210,
+                246
+            ],
+            "flags": {},
+            "order": 6,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 15
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "PreviewImage"
+            },
+            "widgets_values": []
+        },
+        {
+            "id": 17,
+            "type": "PreviewImage",
+            "pos": [
+                1706.3487548828125,
+                408.74542236328125
             ],
             "size": [
                 210,
@@ -326,7 +305,114 @@
                 {
                     "name": "images",
                     "type": "IMAGE",
+                    "link": 16
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "PreviewImage"
+            },
+            "widgets_values": []
+        },
+        {
+            "id": 18,
+            "type": "PreviewImage",
+            "pos": [
+                1709.868408203125,
+                696.4946899414062
+            ],
+            "size": [
+                210,
+                246
+            ],
+            "flags": {},
+            "order": 8,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
                     "link": 17
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "PreviewImage"
+            },
+            "widgets_values": []
+        },
+        {
+            "id": 20,
+            "type": "OpenposePreprocessor",
+            "pos": [
+                833.2552490234375,
+                467.25146484375
+            ],
+            "size": [
+                315,
+                174
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "link": 18
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        19
+                    ],
+                    "slot_index": 0
+                },
+                {
+                    "name": "POSE_KEYPOINT",
+                    "type": "POSE_KEYPOINT",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfyui_controlnet_aux",
+                "ver": "83463c2e4b04e729268e57f638b4212e0da4badc",
+                "Node name for S&R": "OpenposePreprocessor"
+            },
+            "widgets_values": [
+                "enable",
+                "enable",
+                "enable",
+                512,
+                "disable"
+            ]
+        },
+        {
+            "id": 21,
+            "type": "PreviewImage",
+            "pos": [
+                1012.5552368164062,
+                743.3515014648438
+            ],
+            "size": [
+                230.89999389648438,
+                261.3999938964844
+            ],
+            "flags": {},
+            "order": 10,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 19
                 }
             ],
             "outputs": [],
@@ -401,6 +487,22 @@
             18,
             0,
             "IMAGE"
+        ],
+        [
+            18,
+            10,
+            0,
+            20,
+            0,
+            "IMAGE"
+        ],
+        [
+            19,
+            20,
+            0,
+            21,
+            0,
+            "IMAGE"
         ]
     ],
     "groups": [],
@@ -409,8 +511,8 @@
         "ds": {
             "scale": 0.9090909090909095,
             "offset": [
-                -868.4552319086118,
-                143.2485047205017
+                -593.4552319086122,
+                17.848504720501904
             ]
         }
     },
