@@ -1,43 +1,7 @@
 {
-    "last_node_id": 14,
+    "last_node_id": 18,
     "last_link_id": 18,
     "nodes": [
-        {
-            "id": 5,
-            "type": "EmptyLatentImage",
-            "pos": [
-                473,
-                609
-            ],
-            "size": [
-                315,
-                106
-            ],
-            "flags": {},
-            "order": 0,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "LATENT",
-                    "type": "LATENT",
-                    "links": [
-                        2
-                    ],
-                    "slot_index": 0
-                }
-            ],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "EmptyLatentImage"
-            },
-            "widgets_values": [
-                512,
-                512,
-                1
-            ]
-        },
         {
             "id": 3,
             "type": "KSampler",
@@ -50,7 +14,7 @@
                 262
             ],
             "flags": {},
-            "order": 9,
+            "order": 10,
             "mode": 0,
             "inputs": [
                 {
@@ -100,6 +64,174 @@
             ]
         },
         {
+            "id": 4,
+            "type": "CheckpointLoaderSimple",
+            "pos": [
+                -128.99879455566406,
+                221.38059997558594
+            ],
+            "size": [
+                315,
+                98
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "MODEL",
+                    "type": "MODEL",
+                    "links": [
+                        1
+                    ],
+                    "slot_index": 0
+                },
+                {
+                    "name": "CLIP",
+                    "type": "CLIP",
+                    "links": [
+                        3,
+                        5
+                    ],
+                    "slot_index": 1
+                },
+                {
+                    "name": "VAE",
+                    "type": "VAE",
+                    "links": [
+                        8,
+                        15
+                    ],
+                    "slot_index": 2
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "CheckpointLoaderSimple"
+            },
+            "widgets_values": [
+                "epicrealism_naturalSinRC1VAE.safetensors"
+            ]
+        },
+        {
+            "id": 5,
+            "type": "EmptyLatentImage",
+            "pos": [
+                473,
+                609
+            ],
+            "size": [
+                315,
+                106
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "LATENT",
+                    "type": "LATENT",
+                    "links": [
+                        2
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "EmptyLatentImage"
+            },
+            "widgets_values": [
+                1024,
+                1024,
+                1
+            ]
+        },
+        {
+            "id": 6,
+            "type": "CLIPTextEncode",
+            "pos": [
+                324.73870849609375,
+                54.891212463378906
+            ],
+            "size": [
+                422.84503173828125,
+                164.31304931640625
+            ],
+            "flags": {},
+            "order": 5,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 3
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "CONDITIONING",
+                    "type": "CONDITIONING",
+                    "links": [
+                        13
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "CLIPTextEncode"
+            },
+            "widgets_values": [
+                "A beautiful European cobblestone street leading towards a grand old church, sunny bright day, vintage architecture, atmospheric perspective, realistic lighting, ultra detailed, 4K\n"
+            ]
+        },
+        {
+            "id": 7,
+            "type": "CLIPTextEncode",
+            "pos": [
+                341.58294677734375,
+                334.4825439453125
+            ],
+            "size": [
+                425.27801513671875,
+                180.6060791015625
+            ],
+            "flags": {},
+            "order": 6,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "clip",
+                    "type": "CLIP",
+                    "link": 5
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "CONDITIONING",
+                    "type": "CONDITIONING",
+                    "links": [
+                        14
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "CLIPTextEncode"
+            },
+            "widgets_values": [
+                "text, watermark, nsfw, nude, naked"
+            ]
+        },
+        {
             "id": 8,
             "type": "VAEDecode",
             "pos": [
@@ -111,7 +243,7 @@
                 46
             ],
             "flags": {},
-            "order": 10,
+            "order": 11,
             "mode": 0,
             "inputs": [
                 {
@@ -154,7 +286,7 @@
                 58
             ],
             "flags": {},
-            "order": 11,
+            "order": 12,
             "mode": 0,
             "inputs": [
                 {
@@ -173,6 +305,78 @@
             ]
         },
         {
+            "id": 10,
+            "type": "PreviewImage",
+            "pos": [
+                1287.353759765625,
+                -257.0108947753906
+            ],
+            "size": [
+                210,
+                246
+            ],
+            "flags": {},
+            "order": 8,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "images",
+                    "type": "IMAGE",
+                    "link": 10
+                }
+            ],
+            "outputs": [],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.15",
+                "Node name for S&R": "PreviewImage"
+            },
+            "widgets_values": []
+        },
+        {
+            "id": 11,
+            "type": "DepthAnythingPreprocessor",
+            "pos": [
+                335.41180419921875,
+                -238.12435913085938
+            ],
+            "size": [
+                315,
+                82
+            ],
+            "flags": {},
+            "order": 7,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "link": 18
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        10,
+                        12
+                    ],
+                    "slot_index": 0
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfyui_controlnet_aux",
+                "ver": "1e9eac6377c882da8bb360c7544607036904362c",
+                "Node name for S&R": "DepthAnythingPreprocessor",
+                "aux_id": "Fannovel16/comfyui_controlnet_aux"
+            },
+            "widgets_values": [
+                "depth_anything_vitl14.pth",
+                1024
+            ]
+        },
+        {
             "id": 12,
             "type": "ControlNetLoader",
             "pos": [
@@ -184,7 +388,7 @@
                 58
             ],
             "flags": {},
-            "order": 1,
+            "order": 3,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -206,130 +410,6 @@
             ]
         },
         {
-            "id": 11,
-            "type": "DepthAnythingPreprocessor",
-            "pos": [
-                335.41180419921875,
-                -238.12435913085938
-            ],
-            "size": [
-                315,
-                82
-            ],
-            "flags": {},
-            "order": 6,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "image",
-                    "type": "IMAGE",
-                    "link": 18
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "IMAGE",
-                    "type": "IMAGE",
-                    "links": [
-                        10,
-                        12
-                    ],
-                    "slot_index": 0
-                }
-            ],
-            "properties": {
-                "aux_id": "Fannovel16/comfyui_controlnet_aux",
-                "ver": "1e9eac6377c882da8bb360c7544607036904362c",
-                "Node name for S&R": "DepthAnythingPreprocessor",
-                "cnr_id": "comfyui_controlnet_aux"
-            },
-            "widgets_values": [
-                "depth_anything_vitl14.pth",
-                512
-            ]
-        },
-        {
-            "id": 10,
-            "type": "PreviewImage",
-            "pos": [
-                1287.353759765625,
-                -257.0108947753906
-            ],
-            "size": [
-                210,
-                246
-            ],
-            "flags": {},
-            "order": 7,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "images",
-                    "type": "IMAGE",
-                    "link": 10
-                }
-            ],
-            "outputs": [],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "PreviewImage"
-            },
-            "widgets_values": []
-        },
-        {
-            "id": 4,
-            "type": "CheckpointLoaderSimple",
-            "pos": [
-                -128.99879455566406,
-                221.38059997558594
-            ],
-            "size": [
-                315,
-                98
-            ],
-            "flags": {},
-            "order": 2,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "MODEL",
-                    "type": "MODEL",
-                    "links": [
-                        1
-                    ],
-                    "slot_index": 0
-                },
-                {
-                    "name": "CLIP",
-                    "type": "CLIP",
-                    "links": [
-                        3,
-                        5
-                    ],
-                    "slot_index": 1
-                },
-                {
-                    "name": "VAE",
-                    "type": "VAE",
-                    "links": [
-                        8,
-                        15
-                    ],
-                    "slot_index": 2
-                }
-            ],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "CheckpointLoaderSimple"
-            },
-            "widgets_values": [
-                "epicrealism_naturalSinRC1VAE.safetensors"
-            ]
-        },
-        {
             "id": 13,
             "type": "ControlNetApplyAdvanced",
             "pos": [
@@ -341,7 +421,7 @@
                 186
             ],
             "flags": {},
-            "order": 8,
+            "order": 9,
             "mode": 0,
             "inputs": [
                 {
@@ -412,7 +492,7 @@
                 314
             ],
             "flags": {},
-            "order": 3,
+            "order": 1,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -436,89 +516,32 @@
                 "Node name for S&R": "LoadImage"
             },
             "widgets_values": [
-                "ComfyUI_00010_ (2).png",
+                "European_Church.jpg",
                 "image"
             ]
         },
         {
-            "id": 7,
-            "type": "CLIPTextEncode",
+            "id": 15,
+            "type": "Note",
             "pos": [
-                341.58294677734375,
-                334.4825439453125
+                971.4951782226562,
+                499.58416748046875
             ],
             "size": [
-                425.27801513671875,
-                180.6060791015625
-            ],
-            "flags": {},
-            "order": 5,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "clip",
-                    "type": "CLIP",
-                    "link": 5
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "CONDITIONING",
-                    "type": "CONDITIONING",
-                    "links": [
-                        14
-                    ],
-                    "slot_index": 0
-                }
-            ],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "CLIPTextEncode"
-            },
-            "widgets_values": [
-                "text, watermark, nsfw, nude, naked"
-            ]
-        },
-        {
-            "id": 6,
-            "type": "CLIPTextEncode",
-            "pos": [
-                324.73870849609375,
-                54.891212463378906
-            ],
-            "size": [
-                422.84503173828125,
-                164.31304931640625
+                489.79998779296875,
+                351.5
             ],
             "flags": {},
             "order": 4,
             "mode": 0,
-            "inputs": [
-                {
-                    "name": "clip",
-                    "type": "CLIP",
-                    "link": 3
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "CONDITIONING",
-                    "type": "CONDITIONING",
-                    "links": [
-                        13
-                    ],
-                    "slot_index": 0
-                }
-            ],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.3.15",
-                "Node name for S&R": "CLIPTextEncode"
-            },
+            "inputs": [],
+            "outputs": [],
+            "properties": {},
             "widgets_values": [
-                "boy standing in room"
-            ]
+                "Load Image: Loading the image to be taken as a model for controlNet. No masking is needed as we are using the controlNet to do the masking.\nLoad checkpoint - Checkpoint name (select based on the need)\n  out-model - to model into KSampler\n  out-clip - goes to + & - cliptext encoders\n  out-VAE - to VAE Encode & VAE Decode\nClip Text Encoders: for +/- prompt (Clip from load checkpoint)\nEmpty latent image to generate an empty canvas\nDepth Anything: Select the appropriate checkpoint model, and the resolution\n  in-image from load image\n  out- to the image of the Apply load control net\nLoad ControlNet Model: To select the controlNet model\n  out-Control_Net to control_Net_Model of the apply control net\nApply Control Net: To prepare the image based on the prompt given\n  in-+/- prompt from clip text encode \n  in-control_net from load control net\n  in-image from depth anything (Coming from load image)\n  out-prompt - goes to KSampler (+/-) prompts\nKSampler: \n  in-+/- prompts from Apply control net\n  in-model from load checkpoint\n  in-latent from Empty latent image\nVAE Decode: To convert the results into an image. \n  in-samples from latent of the KSampler\n  in-vae-from load checkpoint\n  out-image to save/preview\n"
+            ],
+            "color": "#432",
+            "bgcolor": "#653"
         }
     ],
     "links": [
@@ -655,10 +678,10 @@
     "config": {},
     "extra": {
         "ds": {
-            "scale": 0.5131581182307069,
+            "scale": 0.9090909090909091,
             "offset": [
-                342.74061443342407,
-                568.6351905416586
+                -202.7856715000852,
+                -43.8845320944415
             ]
         }
     },
