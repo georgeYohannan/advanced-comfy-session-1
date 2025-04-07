@@ -10,7 +10,7 @@
     },
     "4": {
         "inputs": {
-            "text": "spotlight",
+            "text": "a bike in a showroom with spot light on",
             "clip": [
                 "2",
                 1
@@ -52,7 +52,7 @@
     },
     "9": {
         "inputs": {
-            "image": "clipspace/clipspace-mask-1454066.800000012.png [input]",
+            "image": "a motor bike.jpeg",
             "upload": "image"
         },
         "class_type": "LoadImage",
