@@ -1,20 +1,20 @@
 {
     "last_node_id": 48,
-    "last_link_id": 172,
+    "last_link_id": 173,
     "nodes": [
         {
             "id": 2,
             "type": "CheckpointLoaderSimple",
             "pos": [
-                -213,
-                381
+                -276.16632080078125,
+                267.77740478515625
             ],
             "size": [
                 315,
                 98
             ],
             "flags": {},
-            "order": 0,
+            "order": 1,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -42,7 +42,6 @@
                     "type": "VAE",
                     "shape": 3,
                     "links": [
-                        10,
                         148
                     ],
                     "slot_index": 2
@@ -61,15 +60,15 @@
             "id": 4,
             "type": "CLIPTextEncode",
             "pos": [
-                203,
-                582
+                126.72360229492188,
+                521.2174072265625
             ],
             "size": [
                 400,
                 200
             ],
             "flags": {},
-            "order": 4,
+            "order": 5,
             "mode": 0,
             "inputs": [
                 {
@@ -95,7 +94,7 @@
                 "Node name for S&R": "CLIPTextEncode"
             },
             "widgets_values": [
-                "a bike in a showroom with spot light on"
+                "a red bike in a bike showroom studio lighting"
             ],
             "color": "#232",
             "bgcolor": "#353"
@@ -104,15 +103,15 @@
             "id": 5,
             "type": "CLIPTextEncode",
             "pos": [
-                207,
-                832
+                142.64181518554688,
+                879.6727294921875
             ],
             "size": [
                 400,
                 200
             ],
             "flags": {},
-            "order": 5,
+            "order": 6,
             "mode": 0,
             "inputs": [
                 {
@@ -166,7 +165,7 @@
                 {
                     "name": "vae",
                     "type": "VAE",
-                    "link": 10,
+                    "link": 173,
                     "slot_index": 1
                 }
             ],
@@ -200,7 +199,7 @@
                 314.0000305175781
             ],
             "flags": {},
-            "order": 2,
+            "order": 0,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -229,7 +228,7 @@
                 "Node name for S&R": "LoadImage"
             },
             "widgets_values": [
-                "a motor bike.jpeg",
+                "clipspace/clipspace-mask-736763.4000000358.png [input]",
                 "image"
             ]
         },
@@ -355,7 +354,7 @@
                 26
             ],
             "flags": {},
-            "order": 7,
+            "order": 3,
             "mode": 0,
             "inputs": [
                 {
@@ -387,8 +386,8 @@
             "id": 36,
             "type": "PreviewImage",
             "pos": [
-                1517,
-                899
+                1713.649658203125,
+                664.2120361328125
             ],
             "size": [
                 377.3042297363281,
@@ -424,7 +423,7 @@
                 58
             ],
             "flags": {},
-            "order": 3,
+            "order": 4,
             "mode": 0,
             "inputs": [
                 {
@@ -445,10 +444,10 @@
                 }
             ],
             "properties": {
-                "aux_id": "kijai/ComfyUI-IC-Light",
+                "cnr_id": "comfyui-ic-light",
                 "ver": "0208191a9bd2a214167c8a52237ecadd1fa0220c",
                 "Node name for S&R": "LoadAndApplyICLightUnet",
-                "cnr_id": "comfyui-ic-light"
+                "aux_id": "kijai/ComfyUI-IC-Light"
             },
             "widgets_values": [
                 "IC-Light/iclight_sd15_fc.safetensors"
@@ -458,15 +457,15 @@
             "id": 40,
             "type": "Reroute",
             "pos": [
-                504,
-                484
+                257.2945251464844,
+                259.9378967285156
             ],
             "size": [
                 75,
                 26
             ],
             "flags": {},
-            "order": 6,
+            "order": 7,
             "mode": 0,
             "inputs": [
                 {
@@ -482,7 +481,8 @@
                     "links": [
                         150,
                         159,
-                        163
+                        163,
+                        173
                     ],
                     "slot_index": 0
                 }
@@ -496,15 +496,15 @@
             "id": 41,
             "type": "PreviewImage",
             "pos": [
-                1048,
-                933
+                1242.2664794921875,
+                1015.2353515625
             ],
             "size": [
                 377.3042297363281,
                 387.90838623046875
             ],
             "flags": {},
-            "order": 10,
+            "order": 8,
             "mode": 0,
             "inputs": [
                 {
@@ -591,10 +591,10 @@
                 }
             ],
             "properties": {
-                "aux_id": "kijai/ComfyUI-IC-Light",
+                "cnr_id": "comfyui-ic-light",
                 "ver": "0208191a9bd2a214167c8a52237ecadd1fa0220c",
                 "Node name for S&R": "ICLightConditioning",
-                "cnr_id": "comfyui-ic-light"
+                "aux_id": "kijai/ComfyUI-IC-Light"
             },
             "widgets_values": [
                 0.18215
@@ -612,7 +612,7 @@
                 46
             ],
             "flags": {},
-            "order": 8,
+            "order": 10,
             "mode": 0,
             "inputs": [
                 {
@@ -657,13 +657,13 @@
                 641.3941040039062
             ],
             "flags": {},
-            "order": 1,
+            "order": 2,
             "mode": 0,
             "inputs": [],
             "outputs": [],
             "properties": {},
             "widgets_values": [
-                "You can adjust the illumination, highlights, or shadows of an image using relight. When you want to relight an image, we primarily use IC-Light nodes, such as the IC-Light model loader and IC-Light Conditioning. For this, we need to load an image and mask it using ControlNet or a mask editor. The image (which will be passed as a latent into IC-Light) will be converted into a mask and then passed to VAE Encode, which will subsequently pass the latent to KSampler.\n\t\n\tConnections:\n\tLoad Image: Loading the image to be relighted.\n\t  This needs to be masked so that comfyUI knows exactly where to paint.\n\tLoad checkpoint - Checkpoint name (select based on the need)\n\t  out-model - to model into Load and Apply IC-Light\n\t  out-clip - goes to + & - cliptext encoders\n\t  out-VAE - to VAE Encode & VAE Decode\n\tVAE Encode - to convert input image to latent\n\t  in-pixels - coming from load image\n\t  in-vae - Coming from load checkpoint or Load VAE\n\tConvert Mask to image: Converting the masked image to an image to be passed on \n\t         to VAE Encode before passing it to KSAmpler\n\t  in-mask from load image\n\t  out-image to VAE Encode before passing that to KSampler\n\tVAE Encode: To convert the mask to an image before passing it to KSampler\n\t  in-pixels - image from convert mask to image\n\t  in-vae coming from load checkpoint or Load VAE\n\t  out- to the latent of KSampler\n\tLoad & Apply IC-Light - setting up ic-light model path\n\t  in-model from load checkpoint\n\t  out-model to KSampler\n\tIC-Light Conditioning - IC light conditioning based on + & - prompts and the image\n\t  in-positive - prompt from clip text encoder\n\t  in-negative - prompt from clip text encoder\n\t  in-vae - from load Checkpoint or Load VAE\n\t  in-foreground (latent) latent from VAE Encode (connected from load image)\n\t  out- positive and negative goes to KSampler\n\t  out- latent no use at this time \n\tKSampler \n\t  in- model - model from load & apply IC-Light\n\t  in-prompt (+/-) prompts from load & apply IC-Light\n\t  in-latent - latent from VAE Encode of convert image to mask\n\tVAE Decode: Will convert the latent from KSampler to an image\n"
+                "You can adjust the illumination, highlights, or shadows of an image using relight. When you want to relight an image, we primarily use IC-Light nodes, such as the IC-Light model loader and IC-Light Conditioning. For this, we need to load an image and mask it using ControlNet or a mask editor. The image (which will be passed as a latent into IC-Light) will be converted into a mask and then passed to VAE Encode, which will subsequently pass the latent to KSampler.\n\t\nConnections:\nLoad Image: Loading the image to be relighted. This needs to be converted to a latent masked so that comfyUI knows exactly where to paint.\n  out-mask to mask in convert mask to image\n  out-image to VAE Encode\nLoad checkpoint - Checkpoint name (select based on the need)\n  out-model - to model into Load and Apply IC-Light\n  out-clip - goes to + & - cliptext encoders\n  out-VAE - to VAE Encode & VAE Decode\nVAE Encode - to convert input image to latent of original image\n  in-pixels - coming from load image\n  in-vae - Coming from load checkpoint or Load VAE\nConvert Mask to image: Converting the masked image to an image to be passed on to VAE Encode before passing it to KSampler\n  in-mask from load image\n  out-image to VAE Encode before passing that to KSampler\nVAE Encode: To convert the mask to an image before passing it to KSampler\n  in-pixels - image from convert mask to image\n  in-vae coming from load checkpoint or Load VAE\n  out- to the latent of KSampler\nLoad & Apply IC-Light - setting up ic-light model path\n  in-model from load checkpoint\n  out-model to KSampler\nIC-Light Conditioning - IC light conditioning based on + & - prompts and the image\n  in-positive - prompt from clip text encoder\n  in-negative - prompt from clip text encoder\n  in-vae - from load Checkpoint or Load VAE\n  in-foreground (latent) latent from VAE Encode (connected from load image)\n  out- positive and negative goes to KSampler\n  out- latent no use at this time \nKSampler \n  in- model - model from load & apply IC-Light\n  in-prompt (+/-) prompts from load & apply IC-Light\n  in-latent - latent from VAE Encode of convert image to mask\nVAE Decode: Will convert the latent from KSampler to an image\n"
             ],
             "color": "#432",
             "bgcolor": "#653"
@@ -685,14 +685,6 @@
             5,
             0,
             "CLIP"
-        ],
-        [
-            10,
-            2,
-            2,
-            7,
-            1,
-            "VAE"
         ],
         [
             77,
@@ -837,16 +829,24 @@
             35,
             0,
             "MASK"
+        ],
+        [
+            173,
+            40,
+            0,
+            7,
+            1,
+            "VAE"
         ]
     ],
     "groups": [],
     "config": {},
     "extra": {
         "ds": {
-            "scale": 0.8264462809917359,
+            "scale": 0.8390545288824001,
             "offset": [
-                324.90725394525145,
-                -223.42853587524405
+                310.29172453393164,
+                -189.53025882805355
             ]
         }
     },
