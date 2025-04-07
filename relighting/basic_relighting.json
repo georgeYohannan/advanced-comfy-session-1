@@ -95,7 +95,7 @@
                 "Node name for S&R": "CLIPTextEncode"
             },
             "widgets_values": [
-                "spotlight"
+                "a bike in a showroom with spot light on"
             ],
             "color": "#232",
             "bgcolor": "#353"
@@ -200,7 +200,7 @@
                 314.0000305175781
             ],
             "flags": {},
-            "order": 1,
+            "order": 2,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -229,7 +229,7 @@
                 "Node name for S&R": "LoadImage"
             },
             "widgets_values": [
-                "clipspace/clipspace-mask-1454066.800000012.png [input]",
+                "a motor bike.jpeg",
                 "image"
             ]
         },
@@ -445,10 +445,10 @@
                 }
             ],
             "properties": {
-                "cnr_id": "comfyui-ic-light",
+                "aux_id": "kijai/ComfyUI-IC-Light",
                 "ver": "0208191a9bd2a214167c8a52237ecadd1fa0220c",
                 "Node name for S&R": "LoadAndApplyICLightUnet",
-                "aux_id": "kijai/ComfyUI-IC-Light"
+                "cnr_id": "comfyui-ic-light"
             },
             "widgets_values": [
                 "IC-Light/iclight_sd15_fc.safetensors"
@@ -591,10 +591,10 @@
                 }
             ],
             "properties": {
-                "cnr_id": "comfyui-ic-light",
+                "aux_id": "kijai/ComfyUI-IC-Light",
                 "ver": "0208191a9bd2a214167c8a52237ecadd1fa0220c",
                 "Node name for S&R": "ICLightConditioning",
-                "aux_id": "kijai/ComfyUI-IC-Light"
+                "cnr_id": "comfyui-ic-light"
             },
             "widgets_values": [
                 0.18215
@@ -657,13 +657,13 @@
                 641.3941040039062
             ],
             "flags": {},
-            "order": 2,
+            "order": 1,
             "mode": 0,
             "inputs": [],
             "outputs": [],
             "properties": {},
             "widgets_values": [
-                "When you want to relight an image, we primarily use IC-Light nodes, such as the IC-Light model loader and IC-Light Conditioning. For this, we need to load an image and mask it using ControlNet or a mask editor. The image (which will be passed as a latent into IC-Light) will be converted into a mask and then passed to VAE Encode, which will subsequently pass the latent to KSampler.\n\t\n\tConnections:\n\tLoad Image: Loading the image to be relighted.\n\t  This needs to be masked so that comfyUI knows exactly where to paint.\n\tLoad checkpoint - Checkpoint name (select based on the need)\n\t  out-model - to model into Load and Apply IC-Light\n\t  out-clip - goes to + & - cliptext encoders\n\t  out-VAE - to VAE Encode & VAE Decode\n\tVAE Encode - to convert input image to latent\n\t  in-pixels - coming from load image\n\t  in-vae - Coming from load checkpoint or Load VAE\n\tConvert Mask to image: Converting the masked image to an image to be passed on \n\t         to VAE Encode before passing it to KSAmpler\n\t  in-mask from load image\n\t  out-image to VAE Encode before passing that to KSampler\n\tVAE Encode: To convert the mask to an image before passing it to KSampler\n\t  in-pixels - image from convert mask to image\n\t  in-vae coming from load checkpoint or Load VAE\n\t  out- to the latent of KSampler\n\tLoad & Apply IC-Light - setting up ic-light model path\n\t  in-model from load checkpoint\n\t  out-model to KSampler\n\tIC-Light Conditioning - IC light conditioning based on + & - prompts and the image\n\t  in-positive - prompt from clip text encoder\n\t  in-negative - prompt from clip text encoder\n\t  in-vae - from load Checkpoint or Load VAE\n\t  in-foreground (latent) latent from VAE Encode (connected from load image)\n\t  out- positive and negative goes to KSampler\n\t  out- latent no use at this time \n\tKSampler \n\t  in- model - model from load & apply IC-Light\n\t  in-prompt (+/-) prompts from load & apply IC-Light\n\t  in-latent - latent from VAE Encode of convert image to mask\n\tVAE Decode: Will convert the latent from KSampler to an image\n"
+                "You can adjust the illumination, highlights, or shadows of an image using relight. When you want to relight an image, we primarily use IC-Light nodes, such as the IC-Light model loader and IC-Light Conditioning. For this, we need to load an image and mask it using ControlNet or a mask editor. The image (which will be passed as a latent into IC-Light) will be converted into a mask and then passed to VAE Encode, which will subsequently pass the latent to KSampler.\n\t\n\tConnections:\n\tLoad Image: Loading the image to be relighted.\n\t  This needs to be masked so that comfyUI knows exactly where to paint.\n\tLoad checkpoint - Checkpoint name (select based on the need)\n\t  out-model - to model into Load and Apply IC-Light\n\t  out-clip - goes to + & - cliptext encoders\n\t  out-VAE - to VAE Encode & VAE Decode\n\tVAE Encode - to convert input image to latent\n\t  in-pixels - coming from load image\n\t  in-vae - Coming from load checkpoint or Load VAE\n\tConvert Mask to image: Converting the masked image to an image to be passed on \n\t         to VAE Encode before passing it to KSAmpler\n\t  in-mask from load image\n\t  out-image to VAE Encode before passing that to KSampler\n\tVAE Encode: To convert the mask to an image before passing it to KSampler\n\t  in-pixels - image from convert mask to image\n\t  in-vae coming from load checkpoint or Load VAE\n\t  out- to the latent of KSampler\n\tLoad & Apply IC-Light - setting up ic-light model path\n\t  in-model from load checkpoint\n\t  out-model to KSampler\n\tIC-Light Conditioning - IC light conditioning based on + & - prompts and the image\n\t  in-positive - prompt from clip text encoder\n\t  in-negative - prompt from clip text encoder\n\t  in-vae - from load Checkpoint or Load VAE\n\t  in-foreground (latent) latent from VAE Encode (connected from load image)\n\t  out- positive and negative goes to KSampler\n\t  out- latent no use at this time \n\tKSampler \n\t  in- model - model from load & apply IC-Light\n\t  in-prompt (+/-) prompts from load & apply IC-Light\n\t  in-latent - latent from VAE Encode of convert image to mask\n\tVAE Decode: Will convert the latent from KSampler to an image\n"
             ],
             "color": "#432",
             "bgcolor": "#653"
@@ -843,10 +843,10 @@
     "config": {},
     "extra": {
         "ds": {
-            "scale": 0.6209213230591553,
+            "scale": 0.8264462809917359,
             "offset": [
-                425.0081339452522,
-                -568.8236408752437
+                324.90725394525145,
+                -223.42853587524405
             ]
         }
     },
