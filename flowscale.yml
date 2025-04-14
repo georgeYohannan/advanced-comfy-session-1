@@ -176,6 +176,12 @@ workflows:
     name: basic_relighting.json
     description: ''
     file: relighting/basic_relighting.json
+  - id: 6mj1ao5ty2t
+    name: virtual_tryon_using_catvton_api.json
+    description: ''
+    file: basics/virtual_tryon_using_catvton_api.json
+    skip_preprocess: true
+    version: 0
 normal_workflows:
   - id: dt1vvo7wj2u
     name: basic_inpainting.json
