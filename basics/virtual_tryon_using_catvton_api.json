@@ -1,0 +1,160 @@
+[
+  {
+    "name": "ComfyUI_CatVTON_Wrapper",
+    "url": "https://github.com/w3rc/ComfyUI_CatVTON_Wrapper",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "chflame163",
+      "title": "ComfyUI_CatVTON_Wrapper",
+      "id": "catvton-wrapper",
+      "reference": "https://github.com/chflame163/ComfyUI_CatVTON_Wrapper",
+      "files": [
+        "https://github.com/chflame163/ComfyUI_CatVTON_Wrapper"
+      ],
+      "install_type": "git-clone",
+      "description": "[a/CatVTON](https://github.com/Zheng-Chong/CatVTON) warpper for ComfyUI"
+    },
+    "nodes": [],
+    "pip": [],
+    "apt": [],
+    "cached": "False",
+    "sha": "b9dcdebc44ec858f612131d04df42ab87a173d70"
+  },
+  {
+    "name": "ComfyUI Impact Pack",
+    "url": "https://github.com/ltdrdata/ComfyUI-Impact-Pack",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "Dr.Lt.Data",
+      "title": "ComfyUI Impact Pack",
+      "id": "comfyui-impact-pack",
+      "reference": "https://github.com/ltdrdata/ComfyUI-Impact-Pack",
+      "files": [
+        "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+      ],
+      "install_type": "git-clone",
+      "description": "This node pack offers various detector nodes and detailer nodes that allow you to configure a workflow that automatically enhances facial details. And provide iterative upscaler.\nNOTE: To use the UltralyticsDetectorProvider, you must install the 'ComfyUI Impact Subpack' separately.",
+      "preemptions": [
+        "SAMLoader"
+      ]
+    },
+    "nodes": [],
+    "pip": [],
+    "apt": [],
+    "cached": "False"
+  },
+  {
+    "name": "segment anything",
+    "url": "https://github.com/storyicon/comfyui_segment_anything",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "storyicon",
+      "title": "segment anything",
+      "id": "sam",
+      "reference": "https://github.com/storyicon/comfyui_segment_anything",
+      "files": [
+        "https://github.com/storyicon/comfyui_segment_anything"
+      ],
+      "install_type": "git-clone",
+      "description": "Based on GroundingDino and SAM, use semantic strings to segment any element in an image. The comfyui version of sd-webui-segment-anything."
+    },
+    "nodes": [],
+    "pip": [],
+    "apt": [],
+    "cached": "False"
+  },
+  {
+    "name": "ComfyUI Essentials",
+    "url": "https://github.com/cubiq/ComfyUI_essentials",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "cubiq",
+      "title": "ComfyUI Essentials",
+      "id": "essentials",
+      "reference": "https://github.com/cubiq/ComfyUI_essentials",
+      "files": [
+        "https://github.com/cubiq/ComfyUI_essentials"
+      ],
+      "install_type": "git-clone",
+      "description": "Essential nodes that are weirdly missing from ComfyUI core. With few exceptions they are new features and not commodities. I hope this will be just a temporary repository until the nodes get included into ComfyUI."
+    },
+    "nodes": [],
+    "pip": [],
+    "apt": [],
+    "cached": "False"
+  },
+  {
+    "name": "ComfyUI Layer Style",
+    "url": "https://github.com/chflame163/ComfyUI_LayerStyle",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "chflame163",
+      "title": "ComfyUI Layer Style",
+      "id": "layerstyle",
+      "reference": "https://github.com/chflame163/ComfyUI_LayerStyle",
+      "files": [
+        "https://github.com/chflame163/ComfyUI_LayerStyle"
+      ],
+      "install_type": "git-clone",
+      "description": "A set of nodes for ComfyUI it generate image like Adobe Photoshop's Layer Style. the Drop Shadow is first completed node, and follow-up work is in progress."
+    },
+    "nodes": [
+      "LayerMask: MaskPreview"
+    ],
+    "apt": [],
+    "pip": [],
+    "preemptions": [],
+    "cached": "False"
+  },
+  {
+    "name": "ComfyUI_LayerStyle_Advance",
+    "url": "https://github.com/chflame163/ComfyUI_LayerStyle_Advance",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "chflame163",
+      "title": "ComfyUI_LayerStyle_Advance",
+      "id": "comfyui_layerstyle_advance",
+      "reference": "https://github.com/chflame163/ComfyUI_LayerStyle_Advance",
+      "files": [
+        "https://github.com/chflame163/ComfyUI_LayerStyle_Advance"
+      ],
+      "install_type": "git-clone",
+      "description": "The nodes detached from ComfyUI Layer Style are mainly those with complex requirements for dependency packages."
+    },
+    "nodes": [
+      "LayerMask: HumanPartsUltra"
+    ],
+    "apt": [],
+    "pip": [],
+    "preemptions": [],
+    "cached": "False"
+  },
+  {
+    "name": "ComfyUI_CatVTON_Wrapper",
+    "url": "https://github.com/w3rc/ComfyUI_CatVTON_Wrapper",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "chflame163",
+      "title": "ComfyUI_CatVTON_Wrapper",
+      "id": "catvton-wrapper",
+      "reference": "https://github.com/chflame163/ComfyUI_CatVTON_Wrapper",
+      "files": [
+        "https://github.com/chflame163/ComfyUI_CatVTON_Wrapper"
+      ],
+      "install_type": "git-clone",
+      "description": "[a/CatVTON](https://github.com/Zheng-Chong/CatVTON) warpper for ComfyUI"
+    },
+    "nodes": [],
+    "pip": [],
+    "apt": [],
+    "cached": "False",
+    "sha": "b9dcdebc44ec858f612131d04df42ab87a173d70"
+  }
+]
