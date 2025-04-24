@@ -182,6 +182,38 @@ workflows:
     file: basics/virtual_tryon_using_catvton_api.json
     skip_preprocess: true
     version: 0
+  - id: f50i2phxlmt
+    name: vton_with_product_photography_api.json
+    file: vton/vton_with_product_photography_api.json
+    version: 0
+    description: ''
+    inputs:
+      - path: 59.inputs.filename_prefix
+        label: filename_prefix
+        parameter_name: filename_prefix_25220
+        type: string
+        demo_type: text
+        category: output
+        randomize: true
+      - path: 60.inputs.image
+        label: Input Product Image
+        parameter_name: image_33647
+        type: string
+        demo_type: image
+        category: input
+        randomize: false
+      - path: 61.inputs.default_value
+        label: Background Prompt
+        parameter_name: default_value_89619
+        type: string
+        demo_type: text
+        category: input
+        randomize: false
+    outputs:
+      - label: Output Image
+        demo_type: image
+    skip_preprocess: true
+    advancedConfig: false
 normal_workflows:
   - id: dt1vvo7wj2u
     name: basic_inpainting.json
@@ -231,3 +263,7 @@ normal_workflows:
     name: fashion_photography_workflow.json
     file: inpainting_and_outpainting/fashion_photography_workflow.json
     version: 1
+  - id: llx89w6amj9
+    name: vton_with_product_photography.json
+    file: vton/vton_with_product_photography.json
+    version: 0
