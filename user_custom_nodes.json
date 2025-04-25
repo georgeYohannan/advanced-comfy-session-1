@@ -288,5 +288,26 @@
     "pip": [],
     "apt": [],
     "cached": "False"
+  },
+  {
+    "name": "ComfyUI_LayerStyle_Advance",
+    "url": "https://github.com/chflame163/ComfyUI_LayerStyle_Advance",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "chflame163",
+      "title": "ComfyUI_LayerStyle_Advance",
+      "id": "comfyui_layerstyle_advance",
+      "reference": "https://github.com/chflame163/ComfyUI_LayerStyle_Advance",
+      "files": [
+        "https://github.com/chflame163/ComfyUI_LayerStyle_Advance"
+      ],
+      "install_type": "git-clone",
+      "description": "The nodes detached from ComfyUI Layer Style are mainly those with complex requirements for dependency packages."
+    },
+    "nodes": [],
+    "pip": [],
+    "apt": [],
+    "cached": "False"
   }
 ]
