@@ -10,7 +10,7 @@
     },
     "11": {
         "inputs": {
-            "model_name": "GroundingDINO_SwinT_OGC (694MB)"
+            "model_name": "GroundingDINO_SwinB (938MB)"
         },
         "class_type": "GroundingDinoModelLoader (segment anything)",
         "_meta": {
@@ -19,7 +19,7 @@
     },
     "12": {
         "inputs": {
-            "prompt": "object",
+            "prompt": "model wearing t-shirt",
             "threshold": 0.3,
             "sam_model": [
                 "10",
@@ -30,7 +30,7 @@
                 0
             ],
             "image": [
-                "23",
+                "62",
                 0
             ]
         },
@@ -215,7 +215,7 @@
             "condition": "always",
             "multiple_of": 0,
             "image": [
-                "60",
+                "64",
                 0
             ]
         },
@@ -775,24 +775,69 @@
             "title": "[FS]⚡Save Image (Output)"
         }
     },
-    "60": {
-        "inputs": {
-            "image": "example.png",
-            "label": "Input Product Image"
-        },
-        "class_type": "FSLoadImage",
-        "_meta": {
-            "title": "[FS]⚡Load Image (Input)"
-        }
-    },
     "61": {
         "inputs": {
-            "default_value": "",
+            "default_value": "Ma model wearing a t-shirt",
             "label": "Background Prompt"
         },
         "class_type": "FSLoadText",
         "_meta": {
             "title": "[FS]⚡Load Text (Input)"
+        }
+    },
+    "62": {
+        "inputs": {
+            "image": "example.mp4"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+            "title": "Load Image"
+        }
+    },
+    "63": {
+        "inputs": {
+            "image": "example.mp4"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+            "title": "Load Image"
+        }
+    },
+    "64": {
+        "inputs": {
+            "mask_grow": 25,
+            "mixed_precision": "fp16",
+            "seed": 0,
+            "steps": 40,
+            "cfg": 2.5,
+            "image": [
+                "62",
+                0
+            ],
+            "mask": [
+                "12",
+                1
+            ],
+            "refer_image": [
+                "63",
+                0
+            ]
+        },
+        "class_type": "CatVTONWrapper",
+        "_meta": {
+            "title": "CatVTON Wrapper"
+        }
+    },
+    "65": {
+        "inputs": {
+            "mask": [
+                "12",
+                1
+            ]
+        },
+        "class_type": "MaskPreview+",
+        "_meta": {
+            "title": "🔧 Mask Preview"
         }
     }
 }
