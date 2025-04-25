@@ -66,7 +66,7 @@
     "15": {
         "inputs": {
             "images": [
-                "26",
+                "67",
                 0
             ]
         },
@@ -93,7 +93,7 @@
                 0
             ],
             "image": [
-                "26",
+                "67",
                 0
             ],
             "vae": [
@@ -133,7 +133,7 @@
     },
     "19": {
         "inputs": {
-            "seed": 654689829781574,
+            "seed": 18321717435528,
             "steps": 20,
             "cfg": 8,
             "sampler_name": "euler",
@@ -249,20 +249,6 @@
             "title": "Load ControlNet Model"
         }
     },
-    "26": {
-        "inputs": {
-            "coarse": "disable",
-            "resolution": 512,
-            "image": [
-                "23",
-                0
-            ]
-        },
-        "class_type": "LineArtPreprocessor",
-        "_meta": {
-            "title": "Realistic Lineart"
-        }
-    },
     "27": {
         "inputs": {
             "x": 0,
@@ -359,7 +345,7 @@
     },
     "33": {
         "inputs": {
-            "seed": 786506531041769,
+            "seed": 1043252600142012,
             "steps": 40,
             "cfg": 2,
             "sampler_name": "dpmpp_2m_sde",
@@ -787,7 +773,7 @@
     },
     "62": {
         "inputs": {
-            "image": "example.mp4"
+            "image": "model_wearing_t-shirt.jpg"
         },
         "class_type": "LoadImage",
         "_meta": {
@@ -796,7 +782,7 @@
     },
     "63": {
         "inputs": {
-            "image": "example.mp4"
+            "image": "a_white_t-shirt.jpeg"
         },
         "class_type": "LoadImage",
         "_meta": {
@@ -807,7 +793,7 @@
         "inputs": {
             "mask_grow": 25,
             "mixed_precision": "fp16",
-            "seed": 0,
+            "seed": 715162962896382,
             "steps": 40,
             "cfg": 2.5,
             "image": [
@@ -838,6 +824,35 @@
         "class_type": "MaskPreview+",
         "_meta": {
             "title": "🔧 Mask Preview"
+        }
+    },
+    "66": {
+        "inputs": {
+            "images": [
+                "64",
+                0
+            ]
+        },
+        "class_type": "PreviewImage",
+        "_meta": {
+            "title": "Preview Image"
+        }
+    },
+    "67": {
+        "inputs": {
+            "detect_hand": "enable",
+            "detect_body": "enable",
+            "detect_face": "enable",
+            "resolution": 512,
+            "scale_stick_for_xinsr_cn": "disable",
+            "image": [
+                "23",
+                0
+            ]
+        },
+        "class_type": "OpenposePreprocessor",
+        "_meta": {
+            "title": "OpenPose Pose"
         }
     }
 }
