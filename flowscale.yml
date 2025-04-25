@@ -185,7 +185,7 @@ workflows:
   - id: f50i2phxlmt
     name: vton_with_product_photography_api.json
     file: vton/vton_with_product_photography_api.json
-    version: 0
+    version: 1
     description: ''
     inputs:
       - path: 59.inputs.filename_prefix
@@ -195,13 +195,6 @@ workflows:
         demo_type: text
         category: output
         randomize: true
-      - path: 60.inputs.image
-        label: Input Product Image
-        parameter_name: image_33647
-        type: string
-        demo_type: image
-        category: input
-        randomize: false
       - path: 61.inputs.default_value
         label: Background Prompt
         parameter_name: default_value_89619
@@ -266,4 +259,4 @@ normal_workflows:
   - id: llx89w6amj9
     name: vton_with_product_photography.json
     file: vton/vton_with_product_photography.json
-    version: 0
+    version: 1
